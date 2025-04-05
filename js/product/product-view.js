@@ -34,7 +34,7 @@ export function createProductView(selector_product_box_inner, cardBtnClick, ERRO
 		},
 		// создание товара
 		createProduct: function (currentItem) {
-			const imgUrl = `.${currentItem.imgUrl}`;
+			//const imgUrl = `.${currentItem.imgUrl}`;
 			//console.log(currentItem.title)
 			const topNode = document.createElement('div');
 			topNode.setAttribute('class', 'product__top');
@@ -43,7 +43,7 @@ export function createProductView(selector_product_box_inner, cardBtnClick, ERRO
 			imgWrapper.setAttribute('class', 'product__img-wrapper');
 			const img = document.createElement('img');
 			img.setAttribute('class', 'product__img');
-			img.setAttribute('src', imgUrl);
+			img.setAttribute('src', currentItem.imgUrl);
 			img.setAttribute('alt', currentItem.title);
 			//
 			const infoNode = document.createElement('div');
