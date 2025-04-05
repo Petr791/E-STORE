@@ -195,12 +195,13 @@ function playcingOrder() {
 				console.log('Корзина стала пустой!');
 				cart = {};
 				storage.setCartStorage(cart);
+				// переход на страницу созданного заказа
+				const id = checkoutModel.getOrderNamber();
+				checkoutView.goOrderPage(id)
 				initOrderCart();
 				console.log('===============');
 
-				// переход на страницу созданного заказа
-				const id = checkoutModel.getOrderNamber();
-				checkoutView.goOrderPage(id);
+				;
 			}
 		})
 		.catch((error) => {
