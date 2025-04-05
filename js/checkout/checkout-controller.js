@@ -196,10 +196,13 @@ function playcingOrder() {
 
 				// очистка корзины
 				console.log('Корзина стала пустой!');
+
+				setTimeout(() => {
 				cart = {};
 				storage.setCartStorage(cart);
-				
 				initOrderCart();
+			}, 2000);
+				
 				console.log('===============');
 
 				;
