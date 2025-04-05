@@ -65,6 +65,7 @@ export function createCheckoutView(selector_checkout_cart, selector_delivery, se
 		},
 		// создание карточки корзины заказа
 		createOrderCartItem: function (item, cartListNode, quantity) {
+			const imgUrl = `.${item.imgUrl}`;
 			//создание элементов и их атрибутов
 			const itemNode = document.createElement('li');
 			itemNode.setAttribute('class', 'checkout-cart__item');
@@ -75,7 +76,7 @@ export function createCheckoutView(selector_checkout_cart, selector_delivery, se
 
 			const img = document.createElement('img');
 			img.setAttribute('class', 'cart-item__img');
-			img.setAttribute('src', item.imgUrl);
+			img.setAttribute('src', imgUrl);
 			img.setAttribute('alt', item.title);
 
 			imgWrapper.append(img);
