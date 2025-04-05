@@ -185,6 +185,9 @@ function playcingOrder() {
 				checkoutModel.setOrderObj(order);
 				storage.addOrder(checkoutModel.getOrderObj()).then(() => {
 						console.log('Операция добавления заказа завершена успешно.');
+					// переход на страницу созданного заказа
+				const id = checkoutModel.getOrderNamber();
+				checkoutView.goOrderPage(id)
 					})
 					.catch((error) => {
 						console.error('Ошибка при добавлении заказа:');
@@ -195,9 +198,7 @@ function playcingOrder() {
 				console.log('Корзина стала пустой!');
 				cart = {};
 				storage.setCartStorage(cart);
-				// переход на страницу созданного заказа
-				const id = checkoutModel.getOrderNamber();
-				checkoutView.goOrderPage(id)
+				
 				initOrderCart();
 				console.log('===============');
 
