@@ -367,7 +367,7 @@ export function createCheckoutView(selector_checkout_cart, selector_delivery, se
 
 			setTimeout(() => {
 				window.location.href = orderUrl;
-			}, 3000);
+			}, 500);
 		}
 
 	};
