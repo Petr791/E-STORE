@@ -6,7 +6,7 @@ const sidebarNode = document.querySelector('.js-sidebar');
 
 let params = new URLSearchParams(document.location.search);
 let productId = params.get('i');
-//console.log('createProductView');
+console.log(productId);
 
 export function createProductView(selector_product_box_inner, cardBtnClick, ERROR_PRODUCT_STRING) {
 
