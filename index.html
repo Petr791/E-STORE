@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>E-STORE КАТАЛОГ</title>
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/catalog.css">
+
+</head>
+
+<body>
+	<header></header>
+	<main>
+		<section class="section__catalog">
+			<div class="container">
+				<div class="section-inner">
+
+					<div class="catalog-box">
+						<div class="js-page__title-wrapper page__title-wrapper">
+							<h2 class="js-catalog__title error__title catalog__title"></h2>
+						</div>
+						<!--  -->
+						<div class="js-catalog-box__inner catalog-box__inner hide">
+							<div class="catalog">
+								<ul id="catalog-cards" class="js-catalog-cards catalog-cards">
+									<!-- ...items -->
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--  -->
+					<div class="js-sidebar sidebar hide">
+						<div class="sidebar-cart">
+							<h2 class="sidebar__title">Корзина</h2>
+							<ul id="sidebar-cart" class="js-sidebar-cart sidebar-cart__items">
+								<!-- ...items -->
+							</ul>
+							<a class="sidebar__btn sidebar__btn-cart" href="./pages/cart.html" target="_blank"
+								rel="noopener noreferrer"><span>Корзина</span></a>
+						</div>
+						<!--  -->
+						<div class="js-sidebar-orders sidebar-order">
+							<h2 class="sidebars-orders__title">Заказы</h2>
+							<div class="js-sidebar-orders__wrapper sidebar-orders__wrapper">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer></footer>
+
+	<script type="module" src="./js/catalog/catalog-controller.js"></script>
+
+</body>
+
+</html>

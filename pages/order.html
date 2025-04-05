@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>E-STORE ЗАКАЗ</title>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/order.css">
+</head>
+
+<body>
+	<header></header>
+	<main>
+		<section class="section__order">
+			<div class="container">
+				<div class="section-inner order-inner hide">
+
+					<div class="order-box">
+
+						<div class="return__link-wrapper">
+							<a class="return__link" href="../index.html" rel="noopener noreferrer"><span>Список
+									товаров</span></a>
+						</div>
+						<div class="js-page__title-wrapper page__title-wrapper hide">
+							<h2 class="js-order__title error__title order__title"></h2>
+						</div>
+
+						<!-- <div class="checkout-box__inner hide"> -->
+						<div class="js-order-box__inner order-box__inner hide">
+							<h1 class="order-title">Заказ #<span class="js-order-title__number order-title__number"></span>
+							</h1>
+							<div class="address order-address">
+								<h2 class="order-adress__title">Адрес доставки</h2>
+								<div class="address__row">
+									<div class="address-list-wrapper">
+										<ul class="js-order-address-list order-address-list">
+											<li class="js-order-address__name address-item order-address-item"></li>
+											<li class="js-order-address__line  address-item order-address-item"></li>
+											<li class="js-order-address__city address-item order-address-item"></li>
+											<li class="js-order-address__tel  address-item order-address-item"></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="payment order-payment">
+								<h2 class="order-payment__title payment__title">Способ оплаты</h2>
+								<p class="js-order-payment__method order-payment__method payment__method"></p>
+							</div>
+							<div class="order-cart-wrapper">
+								<ul class="js-order-cart order-cart">
+									<!-- items -->
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="js-sidebar sidebar hide">
+
+						<div class="order-sidebar">
+
+							<div class="order-sidebar__wrapper ">
+								<h2 class="order-sidebar__title">Сумма</h2>
+
+								<div class="sidebar-row">
+									<p class="sidebar-row__title">Товары: </p>
+									<p class="sidebar-row__sum">$ <span
+											class="js-sidebar__products-sum sidebar-row__products-sum">0</span>
+									</p>
+								</div>
+
+								<div class="sidebar-row">
+									<p class="sidebar-row__title">Доставка: </p>
+									<p class="sidebar-row__sum">$ <span
+											class="js-sidebar-row__delivery-price sidebar-row__delivery-price">0</span>
+									</p>
+								</div>
+							</div>
+
+							<!--  -->
+							<div class="order-total">
+								<p class="order-total__title">Стоимость: <span class="order-total__symbol"> &nbsp$ </span><span
+										class="js-order-total__sum order-total__sum">0</span>
+								</p>
+
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+		</section>
+	</main>
+	<footer></footer>
+
+	<script type="module" src="../js/order/order-controller.js"></script>
+</body>
+
+</html>

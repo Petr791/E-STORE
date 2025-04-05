@@ -1,0 +1,329 @@
+/* popup */
+
+.body_fixed {
+    overflow: hidden;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    display: none;
+}
+
+.popup_open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup__content {
+    padding: 64px 40px 48px;
+    position: relative;
+    width: 676px;
+    max-height: 100%;
+    border-radius: 15px;
+    /* overflow-y: scroll; */
+    overflow-y: auto;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.popup__close-btn {
+    position: absolute;
+    top: 32px;
+    right: 34px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../../img/popup/close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.popup-address {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.popup-address.show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+.popup-payment {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.popup-payment.show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+.popup-form {
+    margin-bottom: 40px;
+    padding-right: 3px;
+    text-align: left;
+}
+
+.popup__label {
+    margin-bottom: 10px;
+    margin-left: 8px;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1A1F1680;
+}
+
+.popup__input-wrapper {
+    margin-bottom: 7px;
+    padding: 12px 24px;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 13px;
+    box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.153);
+}
+
+.popup-form__input {
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #1A1F1680;
+    outline: none;
+    background-color: transparent;
+}
+
+.popup-form__input:focus {
+    outline: none;
+    color: #1A1F16;
+}
+
+.popup-form__input:last-child {
+    margin-bottom: 0px;
+}
+
+.popup-form__input::placeholder {
+    opacity: 0.5;
+}
+
+.popup-form__btn {
+    padding: 8px 20px;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #ffffff;
+    background-color: #1A1F16;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.popup-form__btn:hover {
+    background-color: #1a1f16c5;
+}
+
+.popup-form__btn:disabled {
+    background-color: #3c3c3cc5;
+}
+
+.popup__validation {
+    margin-bottom: 12px;
+    height: 20px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #e81313;
+}
+
+.popup__validation.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.radio-group {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.radio-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    position: relative;
+}
+
+.radio-item:last-child {
+    margin-bottom: 0px;
+}
+
+.radio-label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1A1F16;
+    opacity: 0.7;
+}
+
+
+/* Стилизация радиокнопки:
+       - Убираем стандартное оформление с помощью appearance
+       - Настраиваем размеры, границу и скругление */
+
+.radio-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 20px;
+    border: 1px solid #60695C;
+    border-radius: 2px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px 14px;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 0;
+}
+
+
+/* Стилизация выбранного состояния радиокнопки */
+
+.radio-input:checked {
+    background-image: url('../../img/order/radio-inner.svg');
+}
+
+.radio-input:checked~.radio-label {
+    opacity: 1;
+}
+
+
+/* Стилизация отключённого состояния радиокнопки */
+
+.radio-input:disabled {
+    filter: none;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+
+/* Стилизация метки радиокнопки при отключённом состоянии */
+
+.radio-input:disabled~.radio-label {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+
+/* media queries */
+
+@media (max-width: 961px) {
+    .popup {
+        padding: 0 7px;
+    }
+    .popup__close-btn {
+        right: 54px;
+    }
+}
+
+@media (max-width: 550px) {
+    .popup__content {
+        padding: 40px 16px 40px;
+    }
+    .popup__close-btn {
+        top: 26px;
+        right: 26px;
+        width: 18px;
+        height: 18px;
+    }
+    .popup-form {
+        margin-bottom: 28px;
+    }
+    .popup__label {
+        margin-bottom: 6px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .popup__input-wrapper {
+        padding: 10px 16px;
+    }
+    .popup-form__input {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .popup__validation {
+        margin-bottom: 10px;
+        height: 15px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .popup-form__btn {}
+}
+
+@media (max-width: 400px) {
+    .popup__content {
+        padding: 40px 10px 32px;
+    }
+    .popup__close-btn {
+        top: 21px;
+        right: 21px;
+    }
+    .popup-form {
+        margin-bottom: 23px;
+    }
+    .popup__label {
+        margin-bottom: 5px;
+    }
+    .popup__input-wrapper {
+        padding: 8px 12px;
+    }
+    .popup-form__input {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .popup__validation {
+        margin-bottom: 8px;
+    }
+    .popup-form__btn {}
+}

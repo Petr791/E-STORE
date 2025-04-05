@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>E-STORE ОФОРМЛЕНИЕ</title>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../css/popup/popup.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/checkout.css">
+</head>
+
+<body>
+	<header></header>
+	<main>
+		<section class="section__checkout">
+			<div class="container">
+				<div class="section-inner checkout-inner">
+
+					<div class="checkout-box">
+
+						<div class="return__link-wrapper">
+							<a class="return__link" href="./cart.html" rel="noopener noreferrer"><span>Назад в
+									корзину</span></a>
+						</div>
+						<div class="js-page__title-wrapper page__title-wrapper">
+							<h2 class="js-checkout__title error__title checkout__title"></h2>
+						</div>
+						<!--  -->
+						<div class="js-checkout-box__inner checkout-box__inner hide">
+
+
+							<!--  -->
+							<div class="address checkout-address">
+								<h2 class="page__title checkout-adress__title">Адрес доставки</h2>
+								<div class="address__row">
+
+
+									<div class="address-list-wrapper">
+										<ul class="address-list">
+											<li class="js-address__name address-item">Витя Иванов</li>
+											<li class="js-address__line  address-item">Ленинградский проспект, 27</li>
+											<li class="js-address__city address-item">Москва</li>
+											<li class="js-address__tel  address-item">+7 999 999 99 99</li>
+										</ul>
+									</div>
+
+
+
+									<!--  -->
+									<div class="address__btn-wrapper">
+										<button class="js-popup__btn js-address__btn address__btn" type="button">Изменить</button>
+									</div>
+								</div>
+							</div>
+
+
+							<!--  -->
+							<div class="payment checkout-payment">
+								<h2 class="page__title checkout-payment__title payment__title">Способ оплаты</h2>
+								<div class="payment__row">
+									<!-- Оплата картой при получении -->
+									<p class="js-payment__method payment__method"></p>
+
+									<div class="payment__btn-wrapper">
+										<button class="js-popup__btn js-payment__btn payment__btn" type="button">Изменить</button>
+									</div>
+
+								</div>
+
+
+							</div>
+
+
+
+							<!--  -->
+							<div class="checkout-cart-wrapper">
+								<h1 class="page__title  checkout-cart__title">ПРОВЕРЬ КОРЗИНУ</h1>
+
+								<ul class="js-checkout-cart checkout-cart">
+									<!-- items -->
+								</ul>
+
+							</div>
+
+
+						</div>
+					</div>
+					<!-- сайдбар -->
+					<div class="js-sidebar sidebar hide">
+						<div class="order-sidebar">
+							<div class="order-sidebar__wrapper ">
+								<h2 class="order-sidebar__title">Сумма</h2>
+								<div class="sidebar-row">
+									<p class="sidebar-row__title">Товары: </p>
+									<p class="sidebar-row__sum">$ <span
+											class="js-sidebar__products-sum sidebar-row__products-sum">5849</span>
+									</p>
+								</div>
+								<div class="sidebar-row">
+									<p class="sidebar-row__title">Доставка: </p>
+									<p class="sidebar-row__sum">$ <span
+											class="js-sidebar-row__delivery-price sidebar-row__delivery-price">0</span>
+									</p>
+								</div>
+							</div>
+							<!--  -->
+							<div class="order-total">
+								<p class="order-total__title">Стоимость: <span class="order-total__symbol"> &nbsp$ </span><span
+										class="js-order-total__sum order-total__sum">0</span>
+								</p>
+							</div>
+							<button class="js-checkout__btn sidebar__btn sidebar__btn-order" type="button">Разместить
+								заказ</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer></footer>
+
+	<!-- popup -->
+	<div class="js-order-popup popup">
+		<div class="popup__content js-popup__content">
+			<div class="popup__close-btn js-popup__close-btn"></div>
+			<div class="js-popup-inner">
+				<div class="js-popup-address popup-address">
+					<form id="form" class="popup-form" action="#" autocomplete="on" method="get">
+						<label for="input-name" class="popup__label">Имя</label>
+						<div class="popup__input-wrapper">
+							<input id="input-name" class="popup-form__input" type="text" name="name" placeholder=""
+								maxlength="">
+						</div>
+						<p class="popup__validation js-popup__validation--name">Поле не должно быть пустым!</p>
+
+						<label for="input-line" class="popup__label">Улица, дом</label>
+						<div class="popup__input-wrapper">
+							<input id="input-line" class="popup-form__input" type="text" name="line" placeholder=""
+								maxlength="">
+						</div>
+						<p class="popup__validation js-popup__validation--line">Поле не должно быть пустым!</p>
+
+						<label for="input-city" class="popup__label">Город</label>
+						<div class="popup__input-wrapper">
+							<input id="input-city" class="popup-form__input" type="text" name="city" placeholder=""
+								maxlength="">
+						</div>
+						<p class="popup__validation js-popup__validation--city">Поле не должно быть пустым!</p>
+
+						<label for="input-phone" class="popup__label">Телефон</label>
+						<div class="popup__input-wrapper">
+							<input id="input-phone" class="popup-form__input" type="tel" name="phone" placeholder=""
+								maxlength="">
+						</div>
+						<p class="popup__validation js-popup__validation--phone">Поле не должно быть пустым!</p>
+
+					</form>
+					<button id="form-address-btn" class="js-btn-address popup-form__btn" type="button" form="form"
+						name="save">Сохранить</button>
+				</div>
+				<!--  -->
+				<div class="js-popup-payment popup-payment">
+					<!-- Группа радиокнопок -->
+					<fieldset class="radio-group" role="group">
+						<!-- Скрытый заголовок для скринридеров -->
+						<legend class="visually-hidden">Выбор способа оплаты</legend>
+						<!--  (по умолчанию выбран) -->
+						<div class="radio-item">
+							<input type="radio" class="radio-input" id="payment-1" name="paymentGroup"
+								value="Оплата картой при получении" checked>
+							<label for="payment-1" class="radio-label">Оплата картой при получении</label>
+						</div>
+						<!-- Радиокнопка (отключён) -->
+						<div class="radio-item">
+							<input type="radio" class="radio-input" id="payment-2" name="paymentGroup"
+								value="Система быстрых платежей" disabled>
+							<label for="payment-2" class="radio-label">Система быстрых платежей</label>
+						</div>
+						<!--  -->
+						<div class="radio-item">
+							<input type="radio" class="radio-input" id="payment-3" name="paymentGroup"
+								value="Оплата наличными при получении">
+							<label for="payment-3" class="radio-label">Оплата наличными при получении</label>
+						</div>
+					</fieldset>
+					<!-- <p class="popup__title">Оплата картой при получении</p> -->
+					<button id="form-payment-btn" class="js-btn-payment popup-form__btn" type="button" form="form"
+						name="save">Сохранить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /popup -->
+
+	<script type="module" src="../js/checkout/checkout-controller.js"></script>
+
+</body>
+
+</html>

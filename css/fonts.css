@@ -1,0 +1,12 @@
+@font-face {
+    font-weight: 400;
+    /* Соответствует значению normal */
+    font-family: Open-Sans-local;
+    src: url("../fonts/OpenSans_Condensed-Regular.ttf");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: Open-Sans-local;
+    src: url("../fonts/OpenSans_SemiCondensed-Bold.ttf");
+}
