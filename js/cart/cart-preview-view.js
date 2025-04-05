@@ -30,7 +30,7 @@ export function createCartPreviewView(selector_cart, selector_sum, selector_side
 		},
 		// создание элемента превью корзины
 		createSidebarCartItem: function (item, quantity) {
-			const imgUrl = `.${item.imgUrl}`;
+			//const imgUrl = `.${item.imgUrl}`;
 			//создание элементов и их атрибутов
 			const itemNode = document.createElement('li');
 			itemNode.setAttribute('class', 'sidebar-cart__item');
@@ -41,7 +41,7 @@ export function createCartPreviewView(selector_cart, selector_sum, selector_side
 
 			const img = document.createElement('img');
 			img.setAttribute('class', 'sidebar-cart__img');
-			img.setAttribute('src', imgUrl);
+			img.setAttribute('src', item.imgUrl);
 			img.setAttribute('alt', item.title);
 
 			const quantityNode = document.createElement('span');
