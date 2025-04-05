@@ -21,7 +21,7 @@ export function createCatalogView(selector_catalog_cards, cardBtnClick) {
 		createProduct: function (item) {
 			//console.log(item);
 			//console.log(item.id);
-			const productUrl = `E-STORE/pages/product.html?i=${item.id}`;
+			const productUrl = `/pages/product.html?i=${item.id}`;
 
 			//создание элементов и их атрибутов
 			const itemNode = document.createElement('li');
