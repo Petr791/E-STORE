@@ -3,7 +3,7 @@
 	const CART_STRING = 'cart';
 
 	const CATALOG_PAGE_URL = '../index.html';
-	const ORDER_PAGE_URL = './pages/order.html';
+	const ORDER_PAGE_URL = '/E-STORE/pages/order.html';
 	const CART_PAGE_URL = './cart.html';
 
 	const ERROR_CATALOG_STRING = 'Ошибка загрузки каталога';
