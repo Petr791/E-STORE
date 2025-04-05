@@ -34,7 +34,7 @@ export function createProductView(selector_product_box_inner, cardBtnClick, ERRO
 		},
 		// создание товара
 		createProduct: function (currentItem) {
-			const imgUrl = `.${item.imgUrl}`;
+			const imgUrl = `.${currentItem.imgUrl}`;
 			//console.log(currentItem.title)
 			const topNode = document.createElement('div');
 			topNode.setAttribute('class', 'product__top');
