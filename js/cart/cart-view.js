@@ -18,6 +18,7 @@ export function createCartView(selector_cart, ERROR_CART_STRING, onMinusBtnClick
 			// перебираем загруженные по id товары 
 			for (let item of currentArr) {
 				//console.log(item.id);
+				console.log(item.imgUrl);
 				// передаем товар и количество 
 				for (let cartId in cart) {
 					//console.log(cartId);
@@ -31,6 +32,8 @@ export function createCartView(selector_cart, ERROR_CART_STRING, onMinusBtnClick
 		},
 		// создание карточки корзины
 		createCartItem: function (item, cartListNode, quantity) {
+			//console.log(item.imgUrl);
+			const imgUrl = `.${item.imgUrl}`;
 			//создание элементов и их атрибутов
 			const itemNode = document.createElement('li');
 			itemNode.setAttribute('class', 'cart-item');
@@ -41,7 +44,7 @@ export function createCartView(selector_cart, ERROR_CART_STRING, onMinusBtnClick
 
 			const img = document.createElement('img');
 			img.setAttribute('class', 'cart-item__img');
-			img.setAttribute('src', item.imgUrl);
+			img.setAttribute('src', imgUrl);
 			img.setAttribute('alt', item.title);
 
 			imgWrapper.append(img);
