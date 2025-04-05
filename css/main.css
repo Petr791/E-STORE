@@ -205,7 +205,7 @@ body {
 @media(max-width: 656px) {
     .section-inner {
         padding-top: 10px;
-        padding-bottom: 0px;
+        padding-bottom: 25px;
         flex-direction: column;
         row-gap: 32px;
     }
