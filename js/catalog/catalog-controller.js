@@ -201,7 +201,6 @@ function cardBtnClick(id) {
 // массив номеров заказов userID пользователя
 function initOrdersPreview() {
 	const userID = userModel.getUserID();
-	console.log(userID);
 	// получить все заказы пользователя
 	storage.getStorageAllOrders(userID).then((result) => {
 		if (result === undefined || result.length === 0) {
@@ -209,7 +208,7 @@ function initOrdersPreview() {
 			orderPreviewView.clearPreviewOrders();
 		} else {
 			orderModel.setUserOrdersIds(result);
-			console.log('массив номеров заказов пользователя не пустой');
+			//console.log('массив номеров заказов пользователя не пустой');
 			orderPreviewView.renderPreviewOrders(result);
 		};
 	});
