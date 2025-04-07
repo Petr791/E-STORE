@@ -16,7 +16,6 @@ export function createCartView(selector_cart, ERROR_CART_STRING, onMinusBtnClick
 
 			// перебираем загруженные по id товары 
 			for (let item of currentArr) {
-				console.log(item.imgUrl);
 				// передаем товар и количество 
 				for (let cartId in cart) {
 					if (item.id === cartId) {
