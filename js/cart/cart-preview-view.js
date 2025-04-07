@@ -14,23 +14,19 @@ export function createCartPreviewView(selector_cart, selector_sum, selector_side
 			this.clearPreviewCart();
 			// перебираем загруженные по id товары 
 			for (let item of currentArr) {
-				//console.log(item.id);
 				// передаем товар и количество 
 				for (let cartId in cart) {
-					//console.log(cartId);
 					if (item.id === cartId) {
 						const quantity = cart[cartId];
 
 						this.createSidebarCartItem(item, quantity);
 						const productPrice = Math.round(item.price);
-						//console.log(productPrice + ' x ' + cart[cartId]);
 					}
 				}
 			}
 		},
 		// создание элемента превью корзины
 		createSidebarCartItem: function (item, quantity) {
-			//const imgUrl = `.${item.imgUrl}`;
 			//создание элементов и их атрибутов
 			const itemNode = document.createElement('li');
 			itemNode.setAttribute('class', 'sidebar-cart__item');
@@ -59,7 +55,6 @@ export function createCartPreviewView(selector_cart, selector_sum, selector_side
 			currentArr, id, quantity, selector) {
 			// перебираем загруженные по id массив товаров
 			for (let item of currentArr) {
-				//console.log(item.id);
 				// меняем количество товара у конкретного товара
 				if (item.id === id) {
 					const parent = this.sidebarCartNode;

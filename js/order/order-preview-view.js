@@ -1,12 +1,10 @@
 export function createOrderPreviewView(selector_orders, ORDER_PAGE_URL) {
-	//console.log('createOrderPreviewView');
 	const previewOrdersNode = document.querySelector(selector_orders);
 
 	return {
 		previewOrdersNode,
 		// вывод заказов пользователя по userID
 		renderPreviewOrders: function (orders) {
-			//console.log(orders);
 			this.clearPreviewOrders();
 
 			const itemsNode = document.createElement('ul');

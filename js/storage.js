@@ -41,13 +41,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//console.log(app);
+
 
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
-//////////////////////////////////
-//console.log(app);
-
 
 
 export function createStorage(USER_ID_STRING, CART_STRING) {
@@ -59,10 +56,7 @@ export function createStorage(USER_ID_STRING, CART_STRING) {
 		key: CART_STRING,
 		// установка userid
 		setUserIDStorage: function (userID) {
-			//const userIdString = JSON.stringify(userID);
 			const userIdString = JSON.stringify(userID);
-			//const testUserID = '001';
-			//const userIdString = JSON.stringify(testUserID);
 			localStorage.setItem(this.userID, userIdString);
 
 		},
@@ -131,8 +125,6 @@ export function createStorage(USER_ID_STRING, CART_STRING) {
 			if (docSnap.data() == null) {
 				console.log("Tакого товара нет!");
 			} else {
-				//console.log("Товар есть!");
-				//console.log(docRef);
 				newProduct = {
 					id: docSnap.id,
 					imgUrl: docSnap.data().imgUrl,
@@ -222,7 +214,6 @@ export function createStorage(USER_ID_STRING, CART_STRING) {
 					}
 				}
 
-				//console.log("Все ID заказов:", allOrderIds);
 				return allOrderIds;
 
 			} catch (error) {
@@ -261,7 +252,6 @@ export function createStorage(USER_ID_STRING, CART_STRING) {
 
 				// Получаем только id в нужном порядке
 				const sortedOrderIds = orderIds.map(order => order.id);
-				//console.log(sortedOrderIds);
 				return sortedOrderIds; // Возвращаем массив id в порядке создания
 			} catch (error) {
 				console.error("Error getting documents: ", error);
@@ -275,8 +265,6 @@ export function createStorage(USER_ID_STRING, CART_STRING) {
 
 			let newOrder = null;
 			const userId = currentUserID;
-			//console.log(currentOrderId);
-			//console.log(currentUserID);
 			const orderId = currentOrderId;
 
 			try {

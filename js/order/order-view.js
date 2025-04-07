@@ -27,7 +27,6 @@ export function createOrderView(selector_order_cart, ERROR_ORDER_STRING) {
 		currentOrderId,
 		// получение id заказа
 		getCurrentOrderId: function () {
-			//console.log(currentOrderId);
 			return this.currentOrderId;
 		},
 		// вывод заказа
@@ -35,10 +34,6 @@ export function createOrderView(selector_order_cart, ERROR_ORDER_STRING) {
 			currentOrder, currentUserID, cartArrayFromBase) {
 
 			console.log(currentOrder); //заказ
-			//console.log(currentOrder.userId);
-			//console.log(currentUserID);
-			//console.log(cartArrayFromBase);
-
 			// проверка пользователя userID
 			if (currentOrder.userId === currentUserID) {
 				//проверка номера заказа в запросе и id заказа 
@@ -56,21 +51,15 @@ export function createOrderView(selector_order_cart, ERROR_ORDER_STRING) {
 
 					// id товаров и их количество из заказа
 					const cart = currentOrder.products;
-					//console.log(cart);
 					// товары 
 					const cartArray = cartArrayFromBase;
-					//console.log(cartArray);
 					// корзина заказа
 					// перебираем загруженные по id товары 
 					for (let item of cartArray) {
-						//console.log(item.id);
 						// передаем товар и количество 
 						for (let cartId in cart) {
-							//console.log(cartId);
 							if (item.id === cartId) {
 								let quantity = cart[cartId];
-								//console.log(cartId);
-								//console.log(cart[cartId]);
 								this.createOrderCartItem(item, this.orderListNode, quantity);
 							}
 						}
@@ -86,7 +75,6 @@ export function createOrderView(selector_order_cart, ERROR_ORDER_STRING) {
 		},
 		// создание карточки корзины заказа
 		createOrderCartItem: function (item, orderListNode, quantity) {
-			//const imgUrl = `.${item.imgUrl}`;
 			//создание элементов и их атрибутов
 			const itemNode = document.createElement('li');
 			itemNode.setAttribute('class', 'order-cart__item');

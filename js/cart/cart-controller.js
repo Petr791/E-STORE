@@ -26,7 +26,6 @@ import {
 
 
 ////////////////////////////  ///
-//console.log('cart.js');
 let cart = {};
 
 const storage = createStorage(USER_ID_STRING, CART_STRING);

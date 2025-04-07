@@ -6,7 +6,7 @@ const sidebarNode = document.querySelector('.js-sidebar');
 
 let params = new URLSearchParams(document.location.search);
 let productId = params.get('i');
-console.log(productId);
+//console.log(productId);
 
 export function createProductView(selector_product_box_inner, cardBtnClick, ERROR_PRODUCT_STRING) {
 
@@ -34,8 +34,6 @@ export function createProductView(selector_product_box_inner, cardBtnClick, ERRO
 		},
 		// создание товара
 		createProduct: function (currentItem) {
-			//const imgUrl = `.${currentItem.imgUrl}`;
-			//console.log(currentItem.title)
 			const topNode = document.createElement('div');
 			topNode.setAttribute('class', 'product__top');
 

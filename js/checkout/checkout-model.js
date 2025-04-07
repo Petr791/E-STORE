@@ -32,11 +32,9 @@ export function createCheckoutModel(DELIVERY_PRICE_NUMBER) {
 		////////////////////////////
 		// установка массива товаров из корзины (по id)
 		setCurrentProducts: function (array) {
-			//console.log(array);
 			this.currentProductsArray = array;
 		},
 		getCurrentProducts: function () {
-			//console.log(this.currentProductsArray);
 			return this.currentProductsArray;
 		},
 		// 1 создание и установка объекта заказа (id и userId)
@@ -57,7 +55,6 @@ export function createCheckoutModel(DELIVERY_PRICE_NUMBER) {
 				status: this.orderStatus
 			}
 			this.orderObj = orderNew;
-			//console.log('this.orderNumber: ' + this.orderNumber);
 		},
 		// возращает объект заказа для storage
 		getOrderObj: function () {
@@ -70,7 +67,6 @@ export function createCheckoutModel(DELIVERY_PRICE_NUMBER) {
 		},
 		// получение номеров всех пользователей
 		getAllUsersOrderNumbers: function () {
-			//console.log(this.allUsersOrderNumbers);
 			return this.allUsersOrderNumbers;
 		},
 		// новый номер заказа (старый самый большой номер +1)

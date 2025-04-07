@@ -22,11 +22,7 @@ import {
 } from './checkout-view.js';
 
 
-
-
-
 ///////////////////////
-//console.log('hello checkout!');
 
 let cart = {};
 
@@ -85,7 +81,6 @@ function initOrderCart() {
 				checkoutView.emptyCart();
 			} else {
 				checkoutView.notEmptyCart();
-				//console.log(result);
 
 				// установка корзины из заказа id: количество
 				checkoutModel.setOrderCart(cart);
@@ -185,9 +180,9 @@ function playcingOrder() {
 				checkoutModel.setOrderObj(order);
 				storage.addOrder(checkoutModel.getOrderObj()).then(() => {
 						console.log('Операция добавления заказа завершена успешно.');
-					// переход на страницу созданного заказа
-				const id = checkoutModel.getOrderNamber();
-				checkoutView.goOrderPage(id)
+						// переход на страницу созданного заказа
+						const id = checkoutModel.getOrderNamber();
+						checkoutView.goOrderPage(id)
 					})
 					.catch((error) => {
 						console.error('Ошибка при добавлении заказа:');
@@ -198,11 +193,11 @@ function playcingOrder() {
 				console.log('Корзина стала пустой!');
 
 				setTimeout(() => {
-				cart = {};
-				storage.setCartStorage(cart);
-				initOrderCart();
-			}, 2000);
-				
+					cart = {};
+					storage.setCartStorage(cart);
+					initOrderCart();
+				}, 2000);
+
 				console.log('===============');
 
 				;

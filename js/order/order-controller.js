@@ -22,10 +22,7 @@ import {
 	createOrderPreviewView
 } from './order-preview-view.js';
 
-
-
 /////////////////////////
-//console.log('hello order!');
 
 let cart = {};
 let orders = [];
@@ -34,8 +31,6 @@ const storage = createStorage(USER_ID_STRING, CART_STRING);
 const userModel = createUserModel();
 const orderModel = createOrderModel(orders, DELIVERY_PRICE_NUMBER);
 const orderView = createOrderView('.js-order-cart', ERROR_ORDER_STRING);
-
-/////////////////
 
 init();
 
@@ -103,9 +98,8 @@ function initOrder() {
 					} else {
 						const currentUserID = userModel.getUserID();
 						orderView.notErrorOrder();
-						// 1)массив с товарами , 2) userID, 3)массив с товарами из заказа
+						// 1)заказ , 2) userID, 3)массив с товарами из заказа
 						orderView.renderOrder(orderModel.getCurrentOrder(), currentUserID, result);
-
 						// вывод цены доставки
 						renderDeliveryPrice();
 						// вывод суммы товаров в корзине

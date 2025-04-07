@@ -112,7 +112,6 @@ function initCart() {
 		cart = {};
 		storage.setCartStorage(cart);
 		cartPreviewView.clearPreviewCart();
-		//productView.errorProduct();
 	}
 
 }

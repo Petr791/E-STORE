@@ -1,5 +1,4 @@
 export function createCartModel(cart) {
-	//console.log('createSidebarCartModel');
 	let currentProductsArray = null;
 	let sum = null;
 
@@ -12,7 +11,6 @@ export function createCartModel(cart) {
 			this.cart = cart;
 		},
 		getCart: function () {
-			//console.log(this.cart);
 			return this.cart;
 		},
 		////////////////////////////
@@ -21,18 +19,15 @@ export function createCartModel(cart) {
 			this.currentProductsArray = array;
 		},
 		getCurrentProducts: function () {
-			//console.log(this.currentProductsArray);
 			return this.currentProductsArray;
 		},
 		/////////////////////////
 		// превью корзины. сумма товаров в корзине
 		getSum: function (cart) {
 			let currentSum = 0;
-			//console.log(cart);
 			const productsArr = this.getCurrentProducts();
 			if (cart != null && productsArr !== null) {
 				for (let item of productsArr) {
-					//console.log(item.id);
 					for (let cartId in cart) {
 						if (item.id == cartId) {
 							const productPrice = item.price;

@@ -1,5 +1,4 @@
 export function createOrderModel(userOrders, DELIVERY_PRICE_NUMBER) {
-	//console.log('createOrderModel');
 	let userOrdersIds = [];
 	let currentOrder = null;
 	//const deliveryPrice = 6.99;

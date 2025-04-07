@@ -52,10 +52,8 @@ export function createCheckoutView(selector_checkout_cart, selector_delivery, se
 			this.clearCheckoutCart();
 
 			for (let item of currentArr) {
-				//console.log(item.id);
 				// передаем товар и количество 
 				for (let cartId in cart) {
-					//console.log(cartId);
 					if (item.id === cartId) {
 						let quantity = cart[cartId];
 						this.createOrderCartItem(item, checkoutCartNode, quantity);
@@ -65,7 +63,6 @@ export function createCheckoutView(selector_checkout_cart, selector_delivery, se
 		},
 		// создание карточки корзины заказа
 		createOrderCartItem: function (item, cartListNode, quantity) {
-			//const imgUrl = `.${item.imgUrl}`;
 			//создание элементов и их атрибутов
 			const itemNode = document.createElement('li');
 			itemNode.setAttribute('class', 'checkout-cart__item');

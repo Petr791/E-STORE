@@ -4,7 +4,6 @@ const catalogBoxInnerNode = document.querySelector('.js-catalog-box__inner');
 const sidebarNode = document.querySelector('.js-sidebar');
 
 export function createCatalogView(selector_catalog_cards, cardBtnClick) {
-	//console.log('createCatalogView');
 	const catalogCardsNode = document.querySelector(selector_catalog_cards);
 
 	return {
@@ -19,8 +18,6 @@ export function createCatalogView(selector_catalog_cards, cardBtnClick) {
 			}
 		},
 		createProduct: function (item) {
-			//console.log(item);
-			//console.log(item.id);
 			const productUrl = `https://petr791.github.io/E-STORE/pages/product.html?i=${item.id}`;
 
 			//создание элементов и их атрибутов

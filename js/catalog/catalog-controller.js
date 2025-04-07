@@ -41,9 +41,7 @@ from './catalog-view.js';
 from '../admin.js'; */
 
 
-
 //const adminPage = addCatalogForFirebase(oneArrayId);
-//console.log('catalog-controller');
 
 let cart = {};
 let orders = []; //?
@@ -56,10 +54,6 @@ const cartModel = createCartModel(cart);
 const cartPreviewView = createCartPreviewView('.js-sidebar-cart', '.js-sidebar__total', '.js-sidebar');
 const orderModel = createOrderModel(orders);
 const orderPreviewView = createOrderPreviewView('.js-sidebar-orders__wrapper', ORDER_PAGE_URL);
-
-
-//let myuuid = crypto.randomUUID();
-//console.log('Your UUID is: ' + myuuid);
 
 /////////////////////////////// */
 
@@ -92,7 +86,7 @@ function initUserID() {
 	}
 }
 
-// загрузка и установка массивов из базы
+// загрузка и установка каталога из базы
 function setProducts() {
 
 	if (storage.getStorageProducts()) {
@@ -151,7 +145,7 @@ function initPreviewCart(cart) {
 	if (cart) {
 		cartPreviewView.renderPreviewCart(cartModel.getCurrentProducts(), cart);
 	} else {
-		console.log('превью корзини пустое');
+		console.log('превью корзины пустое');
 	}
 }
 
@@ -206,8 +200,6 @@ function cardBtnClick(id) {
 // для превью заказов
 // массив номеров заказов userID пользователя
 function initOrdersPreview() {
-	//orderPreviewView.clearPreviewOrders();
-	//console.log('событие сторадж в каталоге');
 	const userID = userModel.getUserID();
 	console.log(userID);
 	// получить все заказы пользователя
