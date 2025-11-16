@@ -163,6 +163,7 @@ export function createCheckoutView(selector_checkout_cart, selector_delivery, se
 
 		// очистка корзины заказа
 		clearCheckoutCart: function () {
+			this.clearCheckoutCart();
 			this.checkoutCartNode.innerHTML = '';
 		},
 		// если корзина пуста
